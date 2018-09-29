@@ -140,6 +140,18 @@ use pocketmine\utils\UUID;
  * Main class that handles networking, recovery, and packet sending to the server part
  */
 class Player extends Human implements CommandSender, ChunkLoader, IPlayer{
+	
+	public const OS_ANDROID = 1;
+	public const OS_IOS = 2;
+	public const OS_MAC = 3;
+	public const OS_FIREOS = 4;
+	public const OS_GEARVR = 5;
+	public const OS_HOLOLENS = 6;
+	public const OS_WINDOWS = 7;
+	public const OS_WIN32 = 8;
+	public const OS_DEDICATED = 9;
+	public const OS_ORBIS = 10;
+	public const OS_NX = 11;
 
 	public const SURVIVAL = 0;
 	public const CREATIVE = 1;
@@ -187,6 +199,13 @@ class Player extends Human implements CommandSender, ChunkLoader, IPlayer{
 	protected $xuid = "";
 	/** @var bool */
 	protected $authenticated = false;
+	
+	/** @var string */
+	protected $deviceModel;
+	/** @var int */
+	protected $deviceOS;
+	/** @var string */
+	protected $deviceId;
 
 	protected $windowCnt = 2;
 	/** @var int[] */
@@ -1718,6 +1737,10 @@ class Player extends Human implements CommandSender, ChunkLoader, IPlayer{
 		$this->uuid = UUID::fromString($packet->clientUUID);
 		$this->rawUUID = $this->uuid->toBinary();
 		$this->xuid = $packet->xuid;
+		
+		$this->deviceModel = $packet->clientData["DeviceModel"];
+		$this->deviceOS = $packet->clientData["DeviceOS"];
+		$this->deviceId = $packet->clientData["DeviceId"];
 
 		$this->setSkin($packet->skin);
 
@@ -3372,5 +3395,17 @@ class Player extends Human implements CommandSender, ChunkLoader, IPlayer{
 
 	public function getLoaderId() : int{
 		return $this->loaderId;
+	}
+	
+	public function getDeviceModel() : string{
+		return $this->deviceModel;
+	}
+
+	public function getDeviceOS() : int{
+		return $this->deviceOS;
+	}
+
+	public function getDeviceId() : string{
+		return $this->deviceId;
 	}
 }
