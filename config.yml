@@ -1,0 +1,1 @@
+#!/bin/sh -eo pipefail # No configuration was found in your project. Please refer to https://circleci.com/docs/2.0/ to get started with your configuration. false
