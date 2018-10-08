@@ -1,0 +1,28 @@
+Build-agent version 0.1.757-4358874d (2018-09-24T18:47:04+0000)
+Starting container bash:4.4.19
+  using image bash@sha256:9f0a4aa3c9931bd5fdda51b1b2b74a0398a8eabeaf9519d807e010b9d9d41993
+
+Using build environment variables:
+  BASH_ENV=/tmp/.bash_env-5bb9d7bc4c552f00089313f8-0-build
+  CI=true
+  CIRCLECI=true
+  CIRCLE_BRANCH=master
+  CIRCLE_BUILD_NUM=1
+  CIRCLE_BUILD_URL=https://circleci.com/gh/PocketMineDev/PocketMine-MP/1
+  CIRCLE_COMPARE_URL=
+  CIRCLE_JOB=No Config Found
+  CIRCLE_NODE_INDEX=0
+  CIRCLE_NODE_TOTAL=1
+  CIRCLE_PREVIOUS_BUILD_NUM=
+  CIRCLE_PROJECT_REPONAME=PocketMine-MP
+  CIRCLE_PROJECT_USERNAME=PocketMineDev
+  CIRCLE_REPOSITORY_URL=git@github.com:PocketMineDev/PocketMine-MP.git
+  CIRCLE_SHA1=cf81e210584e8d66bf2685b655ae1bacf625f904
+  CIRCLE_SHELL_ENV=/tmp/.bash_env-5bb9d7bc4c552f00089313f8-0-build
+  CIRCLE_STAGE=No Config Found
+  CIRCLE_USERNAME=PocketMineDev
+  CIRCLE_WORKFLOW_ID=cdec5682-9894-4b80-b7a4-c334a287d2cd
+  CIRCLE_WORKFLOW_JOB_ID=cfede070-9d3f-47e9-a7c0-044ec1d297b7
+  CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS=
+  CIRCLE_WORKFLOW_WORKSPACE_ID=cdec5682-9894-4b80-b7a4-c334a287d2cd
+  CIRCLE_WORKING_DIRECTORY=~/project
